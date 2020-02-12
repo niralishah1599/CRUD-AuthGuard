@@ -4,9 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http'
 import {AuthGuard} from 'src/app/guard/auth.guard';
-
+import {TokenInterceptorService} from 'src/app/services/token-interceptor.service';
 
 const routes: Routes = [
   
@@ -47,6 +47,8 @@ const routes: Routes = [
   CommonModule,
   FormsModule,
   HttpClientModule
+],
+providers:[
 ],
   exports: [RouterModule]
 })

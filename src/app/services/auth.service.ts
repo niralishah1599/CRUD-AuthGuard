@@ -40,6 +40,11 @@ export class AuthService {
 
   logout(){
     this.localStorage.removeItem('token');
-    
+    this.localStorage.removeItem('name');
+  }
+
+  getToken()
+  {
+    return this.localStorage.getItem('token');
   }
 }

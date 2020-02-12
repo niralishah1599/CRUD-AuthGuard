@@ -2,9 +2,9 @@
   <div class="container">
     <h1>SignUp Form</h1>
     <br>
+
+    <input type="text" formControlName="name" placeholder="name" />
     <input type="text" formControlName="email" placeholder="email" />
-
-
     <div *ngIf="Email.invalid && (Email.touch || Email.dirty)">
       <div *ngIf="Email.errors.required" class="alert alert-danger">
         email is required
@@ -25,12 +25,12 @@
         password is required
       </div>
     </div>
-    
+
     <div>
-     <br>
-      
-    
-      <input type="text" placeholder="confirm password" (keyup)="onKey($event)" required>
+    <br>
+
+
+    <input type="text" placeholder="confirm password" (keyup)="onKey($event)" required>
     </div>
     {{errorMsg}}
 

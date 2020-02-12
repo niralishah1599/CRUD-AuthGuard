@@ -3,6 +3,9 @@
   <button  class="btn btn-danger btn-md float-right" (click)="logoutUser()">Logout</button>   
 </ng-container>
 
+<a [routerLink]="['/home']" routerLinkActive="router-link-active" >HOME</a>
+<input type="text" [(ngModel)]="name"  >
+<button (click)="onChanges()">update</button>
 <table class="table table-striped">
     <thead>
     <tr>
@@ -38,5 +41,5 @@
     
     </tbody>
   </table>
-
+  {{name}}
   <router-outlet></router-outlet>
